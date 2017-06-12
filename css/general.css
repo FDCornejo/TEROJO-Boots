@@ -1,0 +1,66 @@
+
+nav.navbar{
+  background-color:#fff ;
+}
+
+.Logito{
+  width: 50%;
+  height: 160%;
+}
+.flaticon-menu{
+  color: #98070B;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #BE1A1E;
+  background-color: #FD8E91;
+}
+
+h1.Nuevo, h1.Promo{
+  text-align: center;
+}
+.Quitar {
+  text-decoration: none;
+  color: white;
+}
+ .Quitar:hover{
+   color: #98070B;
+   text-decoration: none;
+ }
+
+.fond{
+  width: 100%;
+  height: 500px;
+  background-image: url(../img/Diner.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.TREED{
+  background-color: #DE3B3F;
+  border-color: #DE3B3F;
+  color: #fff;
+}
+.TTwhite{
+  color:#fff;
+}
+.TTRede{
+  color:#DE3B3F;
+}
+.tover{
+  background-image: url('../img/te1.jpg');
+  background-size: cover;
+}
+.ELobster{
+font-family: 'Lobster', cursive;
+
+}
+.EMerri{
+  font-family: 'Merriweather', serif;
+
+}
