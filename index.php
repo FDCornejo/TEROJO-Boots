@@ -9,6 +9,7 @@
   <title>Tea Rouge</title>
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
   <link href="https://fonts.googleapis.com/css?family=Lobster|Merriweather" rel="stylesheet">
   <link href="css/general.css" rel="stylesheet">
   <link href="css/Logo.css" rel="stylesheet">
@@ -17,6 +18,27 @@
 </head>
 
 <body>
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   <nav class="navbar navbar-default">
@@ -33,13 +55,13 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="#"><span class="flaticon-home"></span><br>Home</a></li>
-          <li><a href="#"><span class="flaticon-tea-cup"></span><br>Nosotros</a></li>
-          <li><a href="#"><span class="flaticon-basket"></span><br>Canasto</a></li>
-          <li><a href="#"><span class="flaticon-teapot"></span><br>Tienda</a></li>
+          <li><a href="app/Nosotros"><span class="flaticon-tea-cup"></span><br>Nosotros</a></li>
+          <li><a href="app/Carrito"><span class="flaticon-basket"></span><br>Canasto</a></li>
+          <li><a href="app/Tienda"><span class="flaticon-teapot"></span><br>Tienda</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="flaticon-user"><br> Usuario</span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#exampleModal">Action</a></li>
             </ul>
           </li>
         </ul>
@@ -52,7 +74,7 @@
   <main>
     <section class="jumbotron tover text-center">
       <div class="container ">
-        <h1 class="jumbotron-heading ELobster">Rouge Tea</h1>
+        <h1 class="jumbotron-heading ELobster">Tea Rouge</h1>
         <p class="lead text-muted EMerri">Tu Tea Necesitas <br> DisfrutaTea</p>
         <p>
           <a href="#" class="btn TREED TREED">Visita nuestra tienda</a>
@@ -182,7 +204,10 @@
     <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Correo">
   </div>
   </div>
+  <div>
   <button type="submit" class="btn btn-default TREED">Suscribir</button>
+    
+  </div>
 </form>
         </form>
 
