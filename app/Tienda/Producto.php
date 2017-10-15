@@ -51,7 +51,7 @@
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="flaticon-menu"></span>
           </button>
-          <a class="navbar-brand" href="#"> <img class="Logito" src="../../img/logo-peque.png" alt=""></a>
+          <a class="navbar-brand" href="../../"> <img class="Logito" src="../../img/logo-peque.png" alt=""></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

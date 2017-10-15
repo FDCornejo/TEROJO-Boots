@@ -1,100 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title></title>
+      <link rel="shortcut icon" type="image/png" href="../../img/favicon.ico"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="mdl/material.min.css">
+      <link rel="stylesheet" type="text/css" href="css/Nosotros.css">
+      <link href="../../css/general.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lobster|Merriweather" rel="stylesheet">
+    </head>
+    <body>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <title>Tea Rouge</title>
-  <!-- Bootstrap -->
-  <link href="../../css/bootstrap.min.css" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href="../../img/favicon.ico"/>
-  <link href="https://fonts.googleapis.com/css?family=Lobster|Merriweather" rel="stylesheet">
-  <link href="../../css/general.css" rel="stylesheet">
-  <link href="../../css/Logo.css" rel="stylesheet">
-  <link href="../../font/flaticon.css" rel="stylesheet">
+      <!-- Always shows a header, even in smaller screens. -->
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-color--white">
+          <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">
+               <a class="navbar-brand" href="../../"> 
+                <img class="Logito" src="../../img/logo-peque.png" alt="">
+              </a>
+            </span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+          </div>
+        </header>
+        <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title">
+            <a class="navbar-brand" href="../../"> 
+            <img class="Logito" src="../../img/logo-peque.png" alt="">
+          </a>
+        </span>
+          <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Home</a>
+            <a class="mdl-navigation__link" href="">Nosotros</a>
+            <a class="mdl-navigation__link" href="">Canasto</a>
+            <a class="mdl-navigation__link" href="">Usuario</a>
+          </nav>
+        </div>
+        <main class="mdl-layout__content">
+          <div class="page-content">
+            <h1 class="text-center" >Nosotros</h1>
 
-</head>
+            <div class="mdl-grid">
 
-<body>
-
-  <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Welcome</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Mauris sagittis pellentesque lacus eleifend lacinia...
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Get Started
+    </a>
+  </div>
+  <div class="mdl-card__menu">
+    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+      <i class="material-icons">share</i>
+    </button>
   </div>
 </div>
 
+            </div>
+          </div>
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="flaticon-menu"></span>
-        </button>
-        <a class="navbar-brand" href="#"> <img class="Logito" src="../../img/logo-peque.png" alt=""></a>
-      </div>
+            <footer class="mdl-mini-footer mdl-color--red-A700">
+              <div class="mdl-mini-footer__left-section ">
+                <div class="mdl-logo ELobster">Tea Rouge</div>
+                <ul class="mdl-mini-footer__link-list ">
+                  <li><a class="mdl-color-text--red-100 " href="#">Help</a></li>
+                  <li><a class="mdl-color-text--red-100 " href="#">Privacy & Terms</a></li>
+                </ul>
+              </div>
+            </footer>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="../../"><span class="flaticon-home"></span><br>Home</a></li>
-          <li class="active"><a href="#"><span class="flaticon-tea-cup"></span><br>Nosotros</a></li>
-          <li><a href="../Carrito/"><span class="flaticon-basket"></span><br>Canasto</a></li>
-          <li><a href="../Tienda"><span class="flaticon-teapot"></span><br>Tienda</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="flaticon-user"><br> Usuario</span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#" data-toggle="modal" data-target="#exampleModal">Action</a></li>
-            </ul>
-          </li>
-        </ul>
+
+          </div>
+        </main>
 
       </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
-  <main>
- 
-  </main>
-<br>
-  <footer class="footer TREED">
-    <div class="container text-center">
-      <div class="row">
-        <h1> Visita Nuestras redes sociales</h1>
-        <h2> <a class="Quitar" href="#">Facebook</a></h2>
-        <h2> <a  class="Quitar"href="#">Twitter</a></h2>
-        <h2> <a  class="Quitar"href="#">Github</a></h2>
-        <h2> <a  class="Quitar"href="#">Nosotros</a></h2>
-      </div>
-      <div class="row right">
-        <div class="col-md-3 col-md-offset-10">
-          <h1 class="ELobster">Tea Rouge</h1>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="../../js/bootstrap.min.js"></script>
-</body>
 
-</html>
+      <script defer src="mdl/material.min.js"></script>
+    </body>
+    </html>
