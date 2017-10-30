@@ -11,9 +11,10 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
   <link href="https://fonts.googleapis.com/css?family=Lobster|Merriweather" rel="stylesheet">
-  <link href="css/general.css" rel="stylesheet">
   <link href="css/Logo.css" rel="stylesheet">
   <link href="font/flaticon.css" rel="stylesheet">
+  <link href="css/general.css" rel="stylesheet">
+
 
 </head>
 
@@ -55,8 +56,8 @@
   <main>
     <section class="jumbotron tover text-center">
       <div class="container ">
-        <h1 class="jumbotron-heading ELobster">Tea Rouge</h1>
-        <p class="lead text-muted EMerri">Tu Tea Necesitas <br> DisfrutaTea</p>
+        <h1 class="Great  jumbotron-heading ELobster" style="color: white;">Tea Rouge</h1>
+        <p class="lead text-muted EMerri Great">Tu Tea Necesitas <br> DisfrutaTea</p>
         <p>
           <a href="#" class="btn TREED TREED">Visita nuestra tienda</a>
 

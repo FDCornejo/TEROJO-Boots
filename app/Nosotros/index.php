@@ -41,33 +41,66 @@
         </div>
         <main class="mdl-layout__content">
           <div class="page-content">
-            <h1 class="text-center" >Nosotros</h1>
+            <h1 class="text-center ELobster" >Nosotros</h1>
 
             <div class="mdl-grid">
 
-<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Welcome</h2>
-  </div>
-  <div class="mdl-card__supporting-text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Mauris sagittis pellentesque lacus eleifend lacinia...
-  </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Get Started
-    </a>
-  </div>
-  <div class="mdl-card__menu">
-    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-      <i class="material-icons">share</i>
-    </button>
+<div class="mdl-cell--1-offset-desktop  mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--3-col-tablet "> 
+<div class="demo-card-image mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title mdl-card--expand"></div>
+  <div class="mdl-card__actions">
+    <span class="demo-card-image__filename">Image.jpg</span>
   </div>
 </div>
 
-            </div>
-          </div>
+</div>
+        
+          <div class=" mdl-cell--2-offset-tablet mdl-cell--12 -col-phone mdl-cell--4-col-desktop mdl-cell--1-offset-desktop mdl-cell--3-col-tablet"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ull12 mco lphonenisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
 
+  </div>
+              <br>
+              
+              <div class="mdl-grid">
+                  <div class="mdl-cell--1-offset-desktop  mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--3-col-tablet "> 
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ull12 mco lphonenisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </div>
+                  
+                  
+                  <div class=" mdl-cell--2-offset-tablet mdl-cell--12 -col-phone mdl-cell--4-col-desktop mdl-cell--1-offset-desktop mdl-cell--3-col-tablet">
+                  
+                  <div class="demo-card-image mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title mdl-card--expand"></div>
+  <div class="mdl-card__actions">
+    <span class="demo-card-image__filename">Image.jpg</span>
+  </div>
+</div>
+                  
+                  </div>
+              
+              </div>
+              
+              
+               <div class="mdl-grid">
+              
+              <div class =" mdl-cell--2-offset-desktop mdl-cell--8-col-desktop">
+                    <h3 class="text-center" >My Google Maps Demo</h3>
+                  <div class="mapa" id="map"></div>
+                   
+                   
+                   </div>
+              
+              
+              </div>
             <footer class="mdl-mini-footer mdl-color--red-A700">
               <div class="mdl-mini-footer__left-section ">
                 <div class="mdl-logo ELobster">Tea Rouge</div>
@@ -83,7 +116,10 @@
         </main>
 
       </div>
-
+        <script src="js/map.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxeDv3jHtLfd2OI9JA9Xsw1PKlwfww_ZQ&callback=initMap">
+    </script>
       <script defer src="mdl/material.min.js"></script>
     </body>
     </html>
