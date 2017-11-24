@@ -22,7 +22,7 @@
   </div>
   <button type="submit" class="btn btn-default">Iniciar Sesion</button>
 </form>
-                <a href="../Sesion/"><h3>¿No estas Registrado?</h3></a>
+                <a href="app/Sesion/"><h3>¿No estas Registrado?</h3></a>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

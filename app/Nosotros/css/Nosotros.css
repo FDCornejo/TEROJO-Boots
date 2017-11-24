@@ -17,9 +17,8 @@
   font-size: 14px;
   font-weight: 500;
 }
-
- .mdl-cell--2-offset-desktop mdl-cell--8-col-desktop .mapa {
-    width: 500px;
-    height: 400px;
-    background-color: grey;
-      }
+.mapa{
+	width: auto;
+	height: auto;
+background-color: purple;
+}

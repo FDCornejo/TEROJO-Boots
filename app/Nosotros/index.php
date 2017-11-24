@@ -18,7 +18,7 @@
           <div class="mdl-layout__header-row">
             <!-- Title -->
             <span class="mdl-layout-title">
-               <a class="navbar-brand" href="../../"> 
+               <a class="navbar-brand" href="../../">
                 <img class="Logito" src="../../img/logo-peque.png" alt="">
               </a>
             </span>
@@ -28,15 +28,16 @@
         </header>
         <div class="mdl-layout__drawer">
           <span class="mdl-layout-title">
-            <a class="navbar-brand" href="../../"> 
+            <a class="navbar-brand" href="../../">
             <img class="Logito" src="../../img/logo-peque.png" alt="">
           </a>
         </span>
           <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="">Home</a>
-            <a class="mdl-navigation__link" href="">Nosotros</a>
-            <a class="mdl-navigation__link" href="">Canasto</a>
-            <a class="mdl-navigation__link" href="">Usuario</a>
+            <a class="mdl-navigation__link" href="../..">Home</a>
+            <a class="mdl-navigation__link" href="../Nosotros/">Nosotros</a>
+            <a class="mdl-navigation__link" href="../Carrito/">Canasto</a>
+            <a class="mdl-navigation__link" href="../Tienda/">Tienda</a>
+
           </nav>
         </div>
         <main class="mdl-layout__content">
@@ -45,7 +46,7 @@
 
             <div class="mdl-grid">
 
-<div class="mdl-cell--1-offset-desktop  mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--3-col-tablet "> 
+<div class="mdl-cell--1-offset-desktop  mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--3-col-tablet ">
 <div class="demo-card-image mdl-card mdl-shadow--2dp">
   <div class="mdl-card__title mdl-card--expand"></div>
   <div class="mdl-card__actions">
@@ -54,7 +55,7 @@
 </div>
 
 </div>
-        
+
           <div class=" mdl-cell--2-offset-tablet mdl-cell--12 -col-phone mdl-cell--4-col-desktop mdl-cell--1-offset-desktop mdl-cell--3-col-tablet"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ull12 mco lphonenisi ut aliquip ex ea commodo
@@ -64,9 +65,9 @@
 
   </div>
               <br>
-              
+
               <div class="mdl-grid">
-                  <div class="mdl-cell--1-offset-desktop  mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--3-col-tablet "> 
+                  <div class="mdl-cell--1-offset-desktop  mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--3-col-tablet ">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ull12 mco lphonenisi ut aliquip ex ea commodo
@@ -74,33 +75,30 @@
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                   </div>
-                  
-                  
+
+
                   <div class=" mdl-cell--2-offset-tablet mdl-cell--12 -col-phone mdl-cell--4-col-desktop mdl-cell--1-offset-desktop mdl-cell--3-col-tablet">
-                  
+
                   <div class="demo-card-image mdl-card mdl-shadow--2dp">
   <div class="mdl-card__title mdl-card--expand"></div>
   <div class="mdl-card__actions">
     <span class="demo-card-image__filename">Image.jpg</span>
   </div>
 </div>
-                  
+
                   </div>
-              
+
               </div>
-              
-              
-               <div class="mdl-grid">
-              
-              <div class =" mdl-cell--2-offset-desktop mdl-cell--8-col-desktop">
-                    <h3 class="text-center" >My Google Maps Demo</h3>
-                  <div class="mapa" id="map"></div>
-                   
-                   
-                   </div>
-              
-              
-              </div>
+
+<div class="mdl-grid">
+<div class =" mdl-cell--2-offset-desktop mdl-cell--8-col-desktop">
+     <h3 class="text-center" >My Google Maps Demo</h3>
+   <div class="mapa">
+   </div>
+    </div>
+</div>
+<br>
+
             <footer class="mdl-mini-footer mdl-color--red-A700">
               <div class="mdl-mini-footer__left-section ">
                 <div class="mdl-logo ELobster">Tea Rouge</div>
