@@ -1,11 +1,10 @@
 <?php
-
 session_start(); # importante iniciar session al comienzo de la página
- 
+//Datos a Registrar
 #Cifradas
 $Nombre = $_POST['nom'];
 $Apellido = $_POST['ape'];
-$Correo = md5($_POST['mail']);
+$Correo = md5(strtolower($_POST['mail']));
 $Contra = md5($_POST['mot']);
 #No cifradas
 $Calle = $_POST['rue'];
@@ -16,28 +15,27 @@ $Ciudad = $_POST['ville'];
 $Estado = $_POST['etat'];
 $Pais = $_POST['pay'];
 
-
+//Reviso el Captcha
 if(!$_POST['captcha'] == $_SESSION['codigo']){
-header("Location: index.php"); 
-exit;  
+header("Location: index.php");
+exit;
 }
+//Funciones para Buscar
+include "_funciones.php";
 
-include "../Conexion.php";
 
+$func='Buscar';
+if (!$func($Correo)){
+	$func='Registrar1';
+	if($func($Correo,$Nombre,$Apellido,$Contra)){
+		$func='Registrar2';
+		if( $func($Correo,$Calle,$Numero,$Colonia,$CP,$Ciudad,$Estado,$Pais))
+		header("Location: Opciones/Registrado.php");
 
+	}
 
-echo "Nombre: ".$Nombre;
-echo "<br>Apellido: ".$Apellido;
-echo "<br>Correo: ".$Correo;
-echo "<br>Contraseña: ".$Contra;
-echo "<br>Calle: ".$Calle;
-echo "<br>Numero: ".$Numero;
-echo "<br>Colonia: ".$Colonia;
-echo "<br>CP: ".$CP;
-echo "<br>Ciudad: ".$Ciudad;
-echo "<br>Estado: ".$Estado;
-echo "<br>Pais: ".$Pais;
-
+}
+else header("Location: Opciones/Registrado.php");
 
 
 ?>

@@ -1,4 +1,4 @@
-   <!-- Modal 1 -->
+   <!-- Modal 3 -->
    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -9,7 +9,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form  class="form-group" action="../Sesion/_sesion.php" method="post">
+          <form  class="form-group" action="../_sesion.php" method="post">
             <div>
               <label for="exampleInputEmail1">Correo Electronico</label>
               <input type="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" name="Correo" class="form-control"  placeholder="Correo">
@@ -20,7 +20,7 @@
             </div>
             <button type="submit" class="btn btn-default">Iniciar Sesion</button>
 
-          <a href="../Sesion/"><h3>¿No estas Registrado?</h3></a>
+          <a href="../"><h3>¿No estas Registrado?</h3></a>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

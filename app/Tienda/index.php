@@ -1,3 +1,6 @@
+<?php session_start();  ?>
+
+
     <!DOCTYPE html>
     <html lang="en">
 
@@ -46,7 +49,12 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="flaticon-user"><br> Usuario</span></a>
               <ul class="dropdown-menu">
-                <li><a href="#" data-toggle="modal" data-target="#exampleModal">Iniciar Sesion</a></li>
+                 <?php 
+         if (!isset($_SESSION['ID'])) 
+           echo "<li><a href='#' data-toggle='modal' data-target='#exampleModal'>Iniciar Sesion</a></li>";
+         else echo "<li><a href='../Sesion/Opciones/Cerrar.php'>Cerrar Sesion</a></li>";
+
+         ?>
               </ul>
             </li>
           </ul>

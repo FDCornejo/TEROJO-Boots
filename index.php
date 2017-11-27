@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,182 +48,188 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="flaticon-user"><br> Usuario</span></a>
             <ul class="dropdown-menu">
-              <li><a href="#" data-toggle="modal" data-target="#exampleModal">Iniciar Sesion</a></li>
-            </ul>
-          </li>
-        </ul>
+              <?php 
+              if (!isset($_SESSION['ID'])) 
+               echo "<li><a href='#' data-toggle='modal' data-target='#exampleModal'>Iniciar Sesion</a></li>";
+             else echo "<li><a href='app/Sesion/Opciones/Cerrar.php'>Cerrar Sesion</a></li>";
 
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
-  <main>
-    <section class="jumbotron tover text-center">
-      <div class="container ">
-        <h1 class="Great  jumbotron-heading ELobster" style="color: white;">Tea Rouge</h1>
-        <p class="lead text-muted EMerri Great">Tu Tea Necesitas <br> DisfrutaTea</p>
-        <p>
-          <a href="#" class="btn TREED TREED">Visita nuestra tienda</a>
+             ?>
 
-        </p>
-      </div>
-    </section>
-    <div class="container-fluid">
-      <div class="row text-center">
-        <h1 class="Nuevo">Lo Nuevo</h1>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
-            <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
-            <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
-            <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
-            <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row text-center">
-        <h1 class="Promo">Promocion</h1>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
-            <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
-            <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
-            <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
-            <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
-            </div>
-          </div>
-        </div>
-      </div>
+           </ul>
+         </li>
+       </ul>
+
+     </div>
+     <!-- /.navbar-collapse -->
+   </div>
+   <!-- /.container-fluid -->
+ </nav>
+ <main>
+  <section class="jumbotron tover text-center">
+    <div class="container ">
+      <h1 class="Great  jumbotron-heading ELobster" style="color: white;">Tea Rouge</h1>
+      <p class="lead text-muted EMerri Great">Tu Tea Necesitas <br> DisfrutaTea</p>
+      <p>
+        <a href="#" class="btn TREED TREED">Visita nuestra tienda</a>
+
+      </p>
     </div>
+  </section>
+  <div class="container-fluid">
     <div class="row text-center">
-      <h1>Opiniones</h1>
-      <div class="col-md-3 col-sm-6">
+      <h1 class="Nuevo">Lo Nuevo</h1>
+      <div class="col-sm-6 col-md-3">
         <div class="thumbnail">
-          <img src="img/chat.png" alt="...">
+          <img src="img/tp2.jpg" alt="...">
           <div class="caption">
             <h3>Thumbnail label</h3>
             <p>...</p>
             <p><a href="#" class="btn TREED" role="button">Button</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-3 col-sm-6">
-        <div class="thumbnail">
-          <img src="img/chat.png" alt="...">
-          <div class="caption">
-            <h3>Thumbnail label</h3>
-            <p>...</p>
-            <p><a href="#" class="btn TREED" role="button">Button</a>
+        <div class="col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="img/tp2.jpg" alt="...">
+            <div class="caption">
+              <h3>Thumbnail label</h3>
+              <p>...</p>
+              <p><a href="#" class="btn TREED" role="button">Button</a>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-sm-9 text-center">
-        <form class="" action="index.html" method="post">
-          <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Nombre</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Correo Electronico</label>
-    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Correo">
-  </div>
-  </div>
-  <div>
-  <button type="submit" class="btn btn-default TREED">Suscribir</button>
-    
-  </div>
-</form>
-        </form>
+          <div class="col-sm-6 col-md-3">
+            <div class="thumbnail">
+              <img src="img/tp2.jpg" alt="...">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>...</p>
+                <p><a href="#" class="btn TREED" role="button">Button</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <img src="img/tp2.jpg" alt="...">
+                <div class="caption">
+                  <h3>Thumbnail label</h3>
+                  <p>...</p>
+                  <p><a href="#" class="btn TREED" role="button">Button</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row text-center">
+              <h1 class="Promo">Promocion</h1>
+              <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                  <img src="img/tp2.jpg" alt="...">
+                  <div class="caption">
+                    <h3>Thumbnail label</h3>
+                    <p>...</p>
+                    <p><a href="#" class="btn TREED" role="button">Button</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                  <div class="thumbnail">
+                    <img src="img/tp2.jpg" alt="...">
+                    <div class="caption">
+                      <h3>Thumbnail label</h3>
+                      <p>...</p>
+                      <p><a href="#" class="btn TREED" role="button">Button</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                      <img src="img/tp2.jpg" alt="...">
+                      <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p>...</p>
+                        <p><a href="#" class="btn TREED" role="button">Button</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                      <div class="thumbnail">
+                        <img src="img/tp2.jpg" alt="...">
+                        <div class="caption">
+                          <h3>Thumbnail label</h3>
+                          <p>...</p>
+                          <p><a href="#" class="btn TREED" role="button">Button</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row text-center">
+                    <h1>Opiniones</h1>
+                    <div class="col-md-3 col-sm-6">
+                      <div class="thumbnail">
+                        <img src="img/chat.png" alt="...">
+                        <div class="caption">
+                          <h3>Thumbnail label</h3>
+                          <p>...</p>
+                          <p><a href="#" class="btn TREED" role="button">Button</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                        <div class="thumbnail">
+                          <img src="img/chat.png" alt="...">
+                          <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn TREED" role="button">Button</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 col-sm-9 text-center">
+                          <form class="" action="index.html" method="post">
+                            <form>
+                              <div class="form-group">
+                                <label for="exampleInputEmail1">Nombre</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputPassword1">Correo Electronico</label>
+                                <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Correo">
+                              </div>
+                            </div>
+                            <div>
+                              <button type="submit" class="btn btn-default TREED">Suscribir</button>
 
-      </div>
-    </div>
-    </div>
-  </main>
-<br>
-  <footer class="footer TREED">
-    <div class="container text-center">
-      <div class="row">
-        <h1> Visita Nuestras redes sociales</h1>
-        <h2> <a class="Quitar" href="#">Facebook</a></h2>
-        <h2> <a  class="Quitar"href="#">Twitter</a></h2>
-        <h2> <a  class="Quitar"href="#">Github</a></h2>
-        <h2> <a  class="Quitar"href="#">Nosotros</a></h2>
-      </div>
-      <div class="row right">
-        <div class="col-md-3 col-md-offset-10">
-          <h1 class="ELobster">Tea Rouge</h1>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
+                            </div>
+                          </form>
+                        </form>
 
-  <script src="js/bootstrap.min.js"></script>
-</body>
+                      </div>
+                    </div>
+                  </div>
+                </main>
+                <br>
+                <footer class="footer TREED">
+                  <div class="container text-center">
+                    <div class="row">
+                      <h1> Visita Nuestras redes sociales</h1>
+                      <h2> <a class="Quitar" href="#">Facebook</a></h2>
+                      <h2> <a  class="Quitar"href="#">Twitter</a></h2>
+                      <h2> <a  class="Quitar"href="#">Github</a></h2>
+                      <h2> <a  class="Quitar"href="#">Nosotros</a></h2>
+                    </div>
+                    <div class="row right">
+                      <div class="col-md-3 col-md-offset-10">
+                        <h1 class="ELobster">Tea Rouge</h1>
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+                <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                <!-- Include all compiled plugins (below), or include individual files as needed -->
 
-</html>
+                <script src="js/bootstrap.min.js"></script>
+              </body>
+
+              </html>

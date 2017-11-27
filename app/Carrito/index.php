@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +21,7 @@
 </head>
 
 <body>
-<?php include "../Sesion/Modal_Sesion.php" ?>
+  <?php include "../Sesion/Modal_Sesion.php" ?>
 
 
   <nav class="navbar navbar-default">
@@ -38,43 +41,48 @@
           <li><a href="../Nosotros/"><span class="flaticon-tea-cup"></span><br>Nosotros</a></li>
           <li class="active"><a href="#"><span class="flaticon-basket"></span><br>Canasto</a></li>
           <li><a href="../Tienda/"><span class="flaticon-teapot"></span><br>Tienda</a></li>
-      <li class="dropdown">
+          <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="flaticon-user"><br> Usuario</span></a>
             <ul class="dropdown-menu">
-              <li><a href="#" data-toggle="modal" data-target="#exampleModal">Iniciar Sesion</a></li>
-            </ul>
-          </li>
-        </ul>
+             <?php 
+             if (!isset($_SESSION['ID'])) 
+               echo "<li><a href='#' data-toggle='modal' data-target='#exampleModal'>Iniciar Sesion</a></li>";
+             else echo "<li><a href='../Sesion/Opciones/Cerrar.php'>Cerrar Sesion</a></li>";
 
-      </div>
-      <!-- /.navbar-collapse -->
+             ?>
+           </ul>
+         </li>
+       </ul>
+
+     </div>
+     <!-- /.navbar-collapse -->
+   </div>
+   <!-- /.container-fluid -->
+ </nav>
+ <main>
+
+ </main>
+ <br>
+ <footer class="footer TREED">
+  <div class="container text-center">
+    <div class="row">
+      <h1> Visita Nuestras redes sociales</h1>
+      <h2> <a class="Quitar" href="#">Facebook</a></h2>
+      <h2> <a  class="Quitar"href="#">Twitter</a></h2>
+      <h2> <a  class="Quitar"href="#">Github</a></h2>
+      <h2> <a  class="Quitar"href="#">Nosotros</a></h2>
     </div>
-    <!-- /.container-fluid -->
-  </nav>
-  <main>
- 
-  </main>
-<br>
-  <footer class="footer TREED">
-    <div class="container text-center">
-      <div class="row">
-        <h1> Visita Nuestras redes sociales</h1>
-        <h2> <a class="Quitar" href="#">Facebook</a></h2>
-        <h2> <a  class="Quitar"href="#">Twitter</a></h2>
-        <h2> <a  class="Quitar"href="#">Github</a></h2>
-        <h2> <a  class="Quitar"href="#">Nosotros</a></h2>
-      </div>
-      <div class="row right">
-        <div class="col-md-3 col-md-offset-10">
-          <h1 class="ELobster">Tea Rouge</h1>
-        </div>
+    <div class="row right">
+      <div class="col-md-3 col-md-offset-10">
+        <h1 class="ELobster">Tea Rouge</h1>
       </div>
     </div>
-  </footer>
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="../../js/bootstrap.min.js"></script>
+  </div>
+</footer>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../../js/bootstrap.min.js"></script>
 </body>
 
 </html>
