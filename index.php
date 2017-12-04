@@ -80,18 +80,18 @@ session_start();
           <div class="thumbnail">
             <img src="img/tp2.jpg" alt="...">
             <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
+              <h3>Te de Manzanilla</h3>
+              <p><b>DISFRUTALO FRIO!!!</b></p>
               <p><a href="#" class="btn TREED" role="button">Button</a>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
+            <img src="img/tp9.jpg" alt="...">
             <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
+              <h3>Te de Cereza</h3>
+              <p><b>El Dulce Sabor de sus frutos rojos</b></p>
               <p><a href="#" class="btn TREED" role="button">Button</a>
             </div>
           </div>
