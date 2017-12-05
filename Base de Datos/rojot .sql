@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 13-10-2017 a las 09:09:52
+-- Tiempo de generación: 05-12-2017 a las 10:48:20
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 7.1.7
 
@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `rojot`
 --
-CREATE DATABASE IF NOT EXISTS `rojot` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `rojot`;
 
 -- --------------------------------------------------------
 
@@ -31,10 +29,11 @@ USE `rojot`;
 --
 
 CREATE TABLE `Carrito` (
-  `UsuarioID` int(11) NOT NULL,
-  `InventarioID` int(11) NOT NULL,
+  `CarroID` int(11) NOT NULL,
+  `UsuarioID` int(11) DEFAULT NULL,
+  `InventarioID` int(11) DEFAULT NULL,
   `Cantidad` int(11) DEFAULT NULL,
-  `Total` double(5,2) DEFAULT NULL
+  `Total` double(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -59,7 +58,7 @@ CREATE TABLE `Direcciones` (
 --
 
 INSERT INTO `Direcciones` (`UsuarioID`, `Calle`, `Numero`, `Colonia`, `CP`, `Ciudad`, `Estado`, `Pais`) VALUES
-(1, 'Agua Zarca', '473', 'Manantiales', 58186, 'Morelia', 'Michoacan', 'Mexico');
+(20, 'Agua Zarca', '473', 'Manantiales', 58186, 'Morelia', 'Michoacan', 'MÃ©xico');
 
 -- --------------------------------------------------------
 
@@ -75,6 +74,16 @@ CREATE TABLE `Inventario` (
   `Imagen` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `Inventario`
+--
+
+INSERT INTO `Inventario` (`InventarioID`, `ProductoNom`, `Stock`, `Precio`, `Imagen`) VALUES
+(2, 'Te Verde', 89, 15.50, 'Inventario/te1.jpg'),
+(18, 'Te Rojo', 11, 10.50, 'Inventario/te2.jpg'),
+(19, 'Te de Manzanilla', 10, 9.00, 'Inventario/te3.jpg'),
+(20, 'Te Oolong', 41, 25.00, 'Inventario/te4.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -85,7 +94,7 @@ CREATE TABLE `Pedidos` (
   `VentaID` int(11) NOT NULL,
   `InventarioID` int(11) NOT NULL,
   `Cantidad` int(11) DEFAULT NULL,
-  `Total` double(5,2) DEFAULT NULL
+  `Total` double(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -99,15 +108,15 @@ CREATE TABLE `Usuario` (
   `Correo` varchar(255) NOT NULL,
   `Contra` varchar(255) DEFAULT NULL,
   `Nombre` varchar(255) DEFAULT NULL,
-  `ApellidoP` varchar(255) DEFAULT NULL
+  `Apellidos` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `Usuario`
 --
 
-INSERT INTO `Usuario` (`UsuarioID`, `Correo`, `Contra`, `Nombre`, `ApellidoP`) VALUES
-(1, 'Danielcornejo1994@gmail.com', 'Cafeteria2', 'Daniel', 'Cornejo');
+INSERT INTO `Usuario` (`UsuarioID`, `Correo`, `Contra`, `Nombre`, `Apellidos`) VALUES
+(20, '2506deccf01f9ca9fa1ef2f4096f2178', '760f4ceffb8cf58ddc5e0e661385ebd9', 'Daniel', 'Cornejo');
 
 -- --------------------------------------------------------
 
@@ -119,8 +128,15 @@ CREATE TABLE `Ventas` (
   `VentaID` int(11) NOT NULL,
   `IDUsuario` int(11) DEFAULT NULL,
   `FechaVenta` date DEFAULT NULL,
-  `Total` double(5,2) DEFAULT NULL
+  `Total` double(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `Ventas`
+--
+
+INSERT INTO `Ventas` (`VentaID`, `IDUsuario`, `FechaVenta`, `Total`) VALUES
+(19, 20, '2017-12-05', 77.50);
 
 --
 -- Índices para tablas volcadas
@@ -130,8 +146,9 @@ CREATE TABLE `Ventas` (
 -- Indices de la tabla `Carrito`
 --
 ALTER TABLE `Carrito`
-  ADD PRIMARY KEY (`UsuarioID`,`InventarioID`),
-  ADD KEY `InventarioID` (`InventarioID`);
+  ADD PRIMARY KEY (`CarroID`),
+  ADD KEY `ID Inventario Relacion` (`InventarioID`),
+  ADD KEY `Usuario Relacion` (`UsuarioID`);
 
 --
 -- Indices de la tabla `Direcciones`
@@ -170,20 +187,25 @@ ALTER TABLE `Ventas`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `Carrito`
+--
+ALTER TABLE `Carrito`
+  MODIFY `CarroID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+--
 -- AUTO_INCREMENT de la tabla `Inventario`
 --
 ALTER TABLE `Inventario`
-  MODIFY `InventarioID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `InventarioID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT de la tabla `Usuario`
 --
 ALTER TABLE `Usuario`
-  MODIFY `UsuarioID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `UsuarioID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT de la tabla `Ventas`
 --
 ALTER TABLE `Ventas`
-  MODIFY `VentaID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `VentaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- Restricciones para tablas volcadas
 --
@@ -192,8 +214,8 @@ ALTER TABLE `Ventas`
 -- Filtros para la tabla `Carrito`
 --
 ALTER TABLE `Carrito`
-  ADD CONSTRAINT `Carrito_ibfk_1` FOREIGN KEY (`UsuarioID`) REFERENCES `Usuario` (`UsuarioID`),
-  ADD CONSTRAINT `Carrito_ibfk_2` FOREIGN KEY (`InventarioID`) REFERENCES `Inventario` (`InventarioID`);
+  ADD CONSTRAINT `ID Inventario Relacion` FOREIGN KEY (`InventarioID`) REFERENCES `Inventario` (`InventarioID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `Usuario Relacion` FOREIGN KEY (`UsuarioID`) REFERENCES `Usuario` (`UsuarioID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `Direcciones`
