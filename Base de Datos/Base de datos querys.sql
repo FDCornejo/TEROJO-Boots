@@ -25,11 +25,11 @@ primary key(VentaID,InventarioID)
 );
 
 CREATE TABLE Carrito(
+CarroID int primary key auto_increment,
 UsuarioID int  ,
 InventarioID int ,
 Cantidad int ,
-Total double(5,2),
-primary key(UsuarioID,InventarioID)
+Total double(5,2)
 );
 
 create table Usuario(

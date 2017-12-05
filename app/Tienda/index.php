@@ -86,7 +86,7 @@
         <div id="resultado">
         <?php
       include '../Conexion.php';
-      $sql = "SELECT * FROM Inventario";
+      $sql = "SELECT * FROM Inventario where Stock>1";
       $result = $conn->query($sql);
       $cont=0;
      

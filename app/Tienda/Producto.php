@@ -93,9 +93,12 @@ if ($verdad==true) {
   <div class=' col-md-5 col-lg-5 col-sm-12 text-md-left '>
   <h2>Nombre: ".$Nombre." </h2>
   <h3>Precio: $".$Costo."</h3>
-  <h3>Disponible: $".$Stock."</h3>
-  <input type='number' name='' class='form-control form-control-lg' min='1' max='".$Stock."' value='0'><br><br>
-  <input type='submit' class='btn bg-primary' name='' value='Añadir al Carrito' >
+  <h3>Disponible: ".$Stock."</h3>
+  <form id='Fproducto' method='POST' >
+  <input type='number' name='idP' value='".$IDproducto."' class='invisible' >
+  <input type='number' name='Cantidad' class='form-control form-control-lg' min='1' max='".$Stock."' value='0'><br><br>
+  <button class='btn bg-primary' value='Añadir al Carrito' id='Add' >Añadir al carrito</button>
+  <form>
   </div>
   </div>
   </div>
@@ -112,7 +115,7 @@ echo "
   <div class=' col-md-5 col-lg-5 col-sm-12 text-md-left '>
   <h2>Nombre: ".$Nombre." </h2>
   <h3>Precio: $".$Costo."</h3>
-  <h3>Disponible: $".$Stock."</h3>
+  <h3>Disponible: ".$Stock."</h3>
   <h3>!!Necesitas iniciar sesion para comprar</h3>
   <h2><a href='#' data-toggle='modal' data-target='#exampleModal'>Iniciar Sesion</a></h2>
   </div>
@@ -157,3 +160,27 @@ echo "
 </body>
 
 </html>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#Add').click(function(){
+      var datos=$('#Fproducto').serialize();
+      alert(datos);
+      $.ajax({
+        type:"POST",
+        url:"Comprar.php",
+        data:datos,
+        success:function(r){
+          alert (r);
+          if(r==1){
+            alert("Compra Realizada con exito!!");
+            location.reload();
+          }else{
+            alert("No se puede comprar");
+          }
+        }
+      });
+
+return false;
+    });
+  });
+</script>
