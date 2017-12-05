@@ -41,7 +41,13 @@ session_start();
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="#"><span class="flaticon-home"></span><br>Home</a></li>
           <li><a href="app/Nosotros"><span class="flaticon-tea-cup"></span><br>Nosotros</a></li>
-          <li><a href="app/Carrito"><span class="flaticon-basket"></span><br>Canasto</a></li>
+          <?php  
+          if (isset($_SESSION['ID'])) {
+            echo " 
+          <li><a href='app/Carrito'><span class='flaticon-basket'></span><br>Canasto</a></li>
+            ";
+          }
+          ?>
           <li><a href="app/Tienda"><span class="flaticon-teapot"></span><br>Tienda</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="flaticon-user"><br> Usuario</span></a>
