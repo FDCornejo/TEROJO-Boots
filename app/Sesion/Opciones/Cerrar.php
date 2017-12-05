@@ -1,6 +1,9 @@
 <?php
 session_start();
+include "Beforeclose.php";
+Adios($_SESSION['ID']);
 session_destroy();
+  
 
 ?>
 
