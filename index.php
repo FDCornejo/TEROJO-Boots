@@ -68,7 +68,7 @@ session_start();
         <h1 class="Great  jumbotron-heading ELobster" style="color: white;">Tea Rouge</h1>
         <p class="lead text-muted EMerri Great">Tu Tea Necesitas <br> DisfrutaTea</p>
         <p>
-          <a href="#" class="btn TREED TREED">Visita nuestra tienda</a>
+          <a href="app/Tienda/" class="btn TREED TREED">Visita nuestra tienda</a>
 
         </p>
       </div>
