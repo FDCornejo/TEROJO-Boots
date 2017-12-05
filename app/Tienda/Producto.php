@@ -96,7 +96,7 @@ if ($verdad==true) {
   <h3>Disponible: ".$Stock."</h3>
   <form id='Fproducto' method='POST' >
   <input type='number' name='idP' value='".$IDproducto."' class='invisible' >
-  <input type='number' name='Cantidad' class='form-control form-control-lg' min='1' max='".$Stock."' value='0'><br><br>
+  <input type='number' name='Cantidad'value=1 class='form-control form-control-lg' min='1' max='".$Stock."' value='0'><br><br>
   <button class='btn bg-primary' value='Añadir al Carrito' id='Add' >Añadir al carrito</button>
   <form>
   </div>
@@ -129,7 +129,6 @@ echo "
 ?>
 
 
-
 </main>
 
 
@@ -157,6 +156,8 @@ echo "
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootbox.min.js"> </script>
+
 </body>
 
 </html>
@@ -164,18 +165,16 @@ echo "
   $(document).ready(function(){
     $('#Add').click(function(){
       var datos=$('#Fproducto').serialize();
-      alert(datos);
       $.ajax({
         type:"POST",
         url:"Comprar.php",
         data:datos,
         success:function(r){
-          alert (r);
           if(r==1){
-            alert("Compra Realizada con exito!!");
-            location.reload();
+            bootbox.alert("Compra realizada con exito", function(result){ location.reload();});
+
           }else{
-            alert("No se puede comprar");
+            bootbox.alert("Error en la compra");
           }
         }
       });
