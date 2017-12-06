@@ -1,10 +1,11 @@
 <?php
 session_start();
-if (!isset($_SESSION['ID'])) {
-header("Location:Error.php");
+if (isset($_SESSION['ID'])) {
+header("Location:../Carrito");
 }
 
-?>
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +44,6 @@ header("Location:Error.php");
         <ul class="nav navbar-nav navbar-right">
           <li><a href="../../"><span class="flaticon-home"></span><br>Home</a></li>
           <li><a href="../Nosotros/"><span class="flaticon-tea-cup"></span><br>Nosotros</a></li>
-          <li class="active"><a href="#"><span class="flaticon-basket"></span><br>Canasto</a></li>
           <li><a href="../Tienda/"><span class="flaticon-teapot"></span><br>Tienda</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="flaticon-user"><br> Usuario</span></a>
@@ -64,95 +64,17 @@ header("Location:Error.php");
    <!-- /.container-fluid -->
  </nav>
  <main>
-  <div class="container-fluid text-center">
-    <h1 class="text-center">Tu Carrito</h1>
-    <div class="row">
-
-
-      <?php
-      include "Metodos.php";
-
-
-      $Quien=$_SESSION['ID'];
-            $CarroTotal=CarroTotal($Quien);
-      include '../Conexion.php';
-      $sql="SELECT Inv.ProductoNom as Queso, Carr.Cantidad as tengo,Carr.Total as gasto , Carr.CarroId as idCarro,Inv.InventarioID as idInv FROM Carrito as Carr  INNER JOIN Inventario as Inv  on Carr.InventarioID =Inv.InventarioID where Carr.UsuarioID=".$Quien.";";
-      $result = $conn->query($sql);
-      if ($result->num_rows > 0) {
-        echo "
-        <div class='col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1 col-sm-12'>
-        <div class='panel panel-default'>
-        <!-- Default panel contents -->
-        <div class='table-responsive'>
-        <table class='table'>
-        <div class='panel-heading'>
-        <thead>
-        <tr>
-        <th>Nombre Producto</th>
-        <th>Cantidad</th>
-        <th>Total</th>
-        <th>Cambiar</th>
-        <th>Borrar</th>
-        </tr>
-
-        </thead>
-        </div>
-        <tbody>
-        ";
-
-
-
-        while($row = $result->fetch_assoc()){
-          echo "
-          <tr>
-          <form action='Alterar.php' id='Carro' method='POST' >
-          <input class='invisible' name='Que' value='".$row["idInv"]."'>
-          <input class='invisible' name='EnCarr' value='".$row["idCarro"]."'>
-          <td>".$row["Queso"]."</td>
-          <td>
-          <div class='input-group'>
-          <input name='Quiero' type='number' value='".$row["tengo"]."'min='1' max='".$row["tengo"]."' class='form-control'>
-          </div>
-          </td>
-          <td>$".$row["gasto"]."</td>
-          <td><input type='submit' name='Cambiar' class='btn btn-default' value='Cambiar'></td>
-          <td><input type='submit' name='Borrar' class='btn btn-danger' value='Borrar'></td>
-          </form>
-          </tr>
-          ";
-
-
-        }
-
-        echo "
-        </tbody>
-        </table>
-        </div>
-        </div>
-        <form action='Transaccion.php' method='POST'>
-        <input type='submit' name='Pagar' class='btn btn-danger' value='Pagar'>
-        <br>
-        <input class='invisible' type='number' name='TotalCarro' value='".$CarroTotal."'>
-        <form>
-        ";
-
-
-      }
-      else{
-        echo "<h2 clas='text-center'>No Tienes Productos </h2>
-        <a clas='text-center' href='../Tienda/'><h3>Visita Nuestra Tienda y Compra</h3></a>
-
-        ";
-      }
-      $conn->close();
-
-
-      ?>
-<h2>Total en el Carrito: $ <?php echo $CarroTotal;  ?></h2>
-
-    </div>
-</div>
-  </div>
+   <div class='text-center container'>
+   <div class='row'>
+     <div class='col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1 col-sm-12'>
+       <p>
+         <h1>¡¡ Lo Siento !!</h1>
+         <h2>Debes Iniciar Sesion disfrtar de nuestros productos</h2>
+        <h3> <a href='#' data-toggle='modal' data-target='#exampleModal'>Iniciar Sesion</a></h3>
+       </p>
+     </div>
+   </div>
+ </div>
 </main>
 <br>
 <footer class="footer TREED">

@@ -43,13 +43,14 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="../../"><span class="flaticon-home"></span><br>Home</a></li>
         <li><a href="../Nosotros"><span class="flaticon-tea-cup"></span><br>Nosotros</a></li>
-        <li><a href="../Carrito"><span class="flaticon-basket"></span><br>Canasto</a></li>
+        <?php if (isset($_SESSION['ID']))
+        echo "<li><a href='../Carrito'><span class='flaticon-basket'></span><br>Canasto</a></li>";?>
         <li class="active"><a href="../Tienda/"><span class="flaticon-teapot"></span><br>Tienda</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="flaticon-user"><br> Usuario</span></a>
           <ul class="dropdown-menu">
-           <?php 
-           if (!isset($_SESSION['ID'])) 
+           <?php
+           if (!isset($_SESSION['ID']))
              echo "<li><a href='#' data-toggle='modal' data-target='#exampleModal'>Iniciar Sesion</a></li>";
            else echo "<li><a href='../Sesion/Opciones/Cerrar.php'>Cerrar Sesion</a></li>";
 
@@ -73,9 +74,9 @@
 
     <div class="col-lg-6 col-lg-offset-3">
       <div class="input-group">
-        <input type="text" class="form-control" id="busqueda" placeholder="Search for..." aria-label="Search for...">
+        <input type="text" class="form-control" id="busqueda" placeholder="Buscar..." aria-label="SBuscar...">
         <span class="input-group-btn">
-          <button class="btn btn-secondary" type="button">Go!</button>
+          <button class="btn btn-default" type="button">Buscar!!</button>
         </span>
       </div>
     </div>

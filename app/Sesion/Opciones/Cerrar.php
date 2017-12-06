@@ -1,9 +1,12 @@
 <?php
 session_start();
-include "Beforeclose.php";
-Adios($_SESSION['ID']);
-session_destroy();
-  
+if (isset($_SESSION['ID'])) {
+  include "Beforeclose.php";
+  Adios($_SESSION['ID']);
+  session_destroy();
+}
+
+
 
 ?>
 
@@ -44,8 +47,8 @@ session_destroy();
                   <li  class="dropdown active">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="flaticon-user"><br> Usuario</span></a>
                      <ul class="dropdown-menu">
-                       <?php 
-         if (!isset($_SESSION['ID'])) 
+                       <?php
+         if (!isset($_SESSION['ID']))
            echo "<li><a href='#' data-toggle='modal' data-target='#exampleModal'>Iniciar Sesion</a></li>";
          else echo "<li><a href='Cerrar.php'>Cerrar Sesion</a></li>";
 

@@ -41,9 +41,9 @@ session_start();
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a href="#"><span class="flaticon-home"></span><br>Home</a></li>
           <li><a href="app/Nosotros"><span class="flaticon-tea-cup"></span><br>Nosotros</a></li>
-          <?php  
+          <?php
           if (isset($_SESSION['ID'])) {
-            echo " 
+            echo "
           <li><a href='app/Carrito'><span class='flaticon-basket'></span><br>Canasto</a></li>
             ";
           }
@@ -55,8 +55,10 @@ session_start();
               <?php
               if (!isset($_SESSION['ID']))
                echo "<li><a href='#' data-toggle='modal' data-target='#exampleModal'>Iniciar Sesion</a></li>";
-             else echo "<li><a href='app/Sesion/Opciones/Cerrar.php'>Cerrar Sesion</a></li>";
-
+             else{
+               echo "<li><a href='app/User/index.php'>Usuario</a></li>"; 
+               echo "<li><a href='app/Sesion/Opciones/Cerrar.php'>Cerrar Sesion</a></li>";
+             }
              ?>
 
             </ul>
