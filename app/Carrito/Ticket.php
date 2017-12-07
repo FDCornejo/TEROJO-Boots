@@ -69,13 +69,32 @@ header("Location:../Carrito/Error.php");
    <div class='row'>
      <div class='col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1 col-sm-12'>
        <?php
-session_start();
+
 echo "<h1>";
-echo 	$_SESSION['IDVenta'];
+$Venta=	$_SESSION['IDVenta'];
 echo "</h1>";
 
-         ?>
+  include '../Conexion.php';
+  if ($conn->connect_error) return 0;
+  else{
+    $sql=" select ProductoNom, Precio, Cantidad, Total from Pedidos P inner join Inventario I on P.InventarioID=I.InventarioID  where P.VentaID=".$Venta.";";
+    $result1 = $conn->query($sql);
+    //Si El numero de columnas de la consulta es 0, retornamos 0
+    if ($result1->num_rows > 0){
+      while($row = $result1->fetch_assoc()) {
+        echo "<br>Nombre Producto".$row["ProductoNom"]."";
+        echo "<tr>Precio: ".$row["Precio"]."";
+        echo "<tr>Cantidad:".$row["Cantidad"]."";
+        echo "<tr>Total a Pagar:".$row["Cantidad"]."";
+      }
+    }
+    else echo "No se Encontro Nada";
+  }
+  $conn-> close();
 
+         ?>
+       </div>
+</div>
 
      </div>
    </div>
