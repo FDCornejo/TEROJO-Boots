@@ -104,6 +104,7 @@ if ($verdad==true) {
   <h3>Disponible: ".$Stock."</h3>
   <form id='Fproducto' method='POST' >
   <input type='number' name='idP' value='".$IDproducto."' class='invisible' >
+  <input type='number' name='Disp' value='".$Stock."' class='invisible' >
   <input type='number' name='Cantidad'value=1 class='form-control form-control-lg' min='1' max='".$Stock."' value='0'><br><br>
   <button class='btn bg-primary' value='Añadir al Carrito' id='Add' >Añadir al carrito</button>
   <form>

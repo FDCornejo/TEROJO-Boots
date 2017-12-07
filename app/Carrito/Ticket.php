@@ -68,7 +68,13 @@ header("Location:../Carrito/Error.php");
    <div class='text-center container'>
    <div class='row'>
      <div class='col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1 col-sm-12'>
+       <?php
+session_start();
+echo "<h1>";
+echo 	$_SESSION['IDVenta'];
+echo "</h1>";
 
+         ?>
 
 
      </div>

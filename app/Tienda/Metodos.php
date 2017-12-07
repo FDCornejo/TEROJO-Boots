@@ -21,6 +21,31 @@ function Check($Quien, $Que)
 		}
 	}
 }
+function Check1($Que)
+{
+	include '../Conexion.php';
+	if ($conn->connect_error) return 0;
+	else{
+		$sqlCheck="Select Stock from Carrito where InventarioID=".$Que." ";
+		$result1 = $conn->query($sqlCheck);
+		//Si El numero de columnas de la consulta es 0, retornamos 0
+		if($result1->num_rows==0){
+			$conn->close();
+			return 0;
+		}
+		else{
+			while($row = $result1->fetch_assoc()) {
+				$Stock=$row["Stock"];
+			}
+			$conn->close();
+			return $Stock;
+
+		}
+	}
+}
+
+
+
 
 
 //Esta funcion añade mas producto al carrito
@@ -31,7 +56,7 @@ function AddCarrito($Cuanto,$Total,$Carr){
 		$sqlUP="UPDATE Carrito SET Cantidad= Cantidad +".$Cuanto.", Total = Total + ".$Total." WHERE  CarroID =".$Carr."";
 		if ($conn->query($sqlUP) === TRUE){$conn->close(); return 1;}
 		else{$conn->close(); return 0; }
-		
+
 	}
 }
 //Esta funcion Hace un nuevo registro al carrito
@@ -43,7 +68,7 @@ include '../Conexion.php';
 							  VALUES (NULL, '".$Quien."', '".$Que."', '".$Cuanto."', '".$Total."')";
 		if ($conn->query($sqlIN) === TRUE){$conn->close(); return 1;}
 		else{$conn->close(); return 0; }
-		
+
 	}
 }
 //Con esta funcion Obtenemmos cuanto se hace por un pedido de carrito
@@ -73,7 +98,7 @@ function Reduceinv($Que,$Cuanto){
 		$sqlUP="UPDATE Inventario SET Stock = Stock-".$Cuanto."  WHERE InventarioID = ".$Que."";
 		if ($conn->query($sqlUP) === TRUE){$conn->close(); return 1;}
 		else{$conn->close(); return 0; }
-		
+
 	}
 
 
