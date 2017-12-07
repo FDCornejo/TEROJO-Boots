@@ -86,41 +86,41 @@ session_start();
         <h1 class="Nuevo">Lo Nuevo</h1>
         <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
+            <img src="app/Tienda/Inventario/te2.jpg" alt="...">
+            <div class="caption">
+              <h3>Te de Canela</h3>
+              <p><b>DISFRUTALO FRIO!!!</b></p>
+              <p><a href="app/Tienda/" class="btn TREED" role="button">Visita la Tienda</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="app/Tienda/Inventario/te1.jpg" alt="...">
+            <div class="caption">
+              <h3>Te Verde</h3>
+              <p><b>Gran Sabor Ancestral</b></p>
+              <p><a href="app/Tienda/" class="btn TREED" role="button">Visita la Tienda</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="thumbnail">
+            <img src="app/Tienda/Inventario/te3.jpg" alt="...">
             <div class="caption">
               <h3>Te de Manzanilla</h3>
-              <p><b>DISFRUTALO FRIO!!!</b></p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
+              <p>Super recomendando</p>
+              <p><a href="app/Tienda/" class="btn TREED" role="button">Visita la Tienda</a>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
-            <img src="img/tp9.jpg" alt="...">
+            <img src="app/Tienda/Inventario/te4.jpg" alt="...">
             <div class="caption">
-              <h3>Te de Cereza</h3>
-              <p><b>El Dulce Sabor de sus frutos rojos</b></p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
-            <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3">
-          <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
-            <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
+              <h3>Te de Oolong</h3>
+              <p>Super Delicioso</p>
+              <p><a href="app/Tienda/" class="btn TREED" role="button">Visita la Tienda</a>
             </div>
           </div>
         </div>
@@ -129,41 +129,41 @@ session_start();
         <h1 class="Promo">Promocion</h1>
         <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
+            <img src="app/Tienda/Inventario/te5.jpg" alt="...">
             <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
+              <h3>Te de Limon</h3>
+              <p>Un clasico en los Te</p>
+              <p><a href="app/Tienda/" class="btn TREED" role="button">Visita la Tienda</a>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
+            <img src="app/Tienda/Inventario/te6.jpg" alt="...">
             <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
+              <h3>Te de Menta</h3>
+              <p>Refrescante</p>
+              <p><a href="app/Tienda/" class="btn TREED" role="button">Visita la Tienda</a>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
+            <img src="app/Tienda/Inventario/te7.jpg" alt="...">
             <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
+              <h3>Te Rojo</h3>
+              <p>Tan Bueno como el Verde</p>
+              <p><a href="app/Tienda/" class="btn TREED" role="button">Visita la Tienda</a>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
-            <img src="img/tp2.jpg" alt="...">
+            <img src="app/Tienda/Inventario/te8.jpg" alt="...">
             <div class="caption">
-              <h3>Thumbnail label</h3>
-              <p>...</p>
-              <p><a href="#" class="btn TREED" role="button">Button</a>
+              <h3>Te de Jamaica</h3>
+              <p>Exotico</p>
+              <p><a href="app/Tienda/" class="btn TREED" role="button">Visita la Tienda</a>
             </div>
           </div>
         </div>
@@ -175,9 +175,9 @@ session_start();
         <div class="thumbnail">
           <img src="img/chat.png" alt="...">
           <div class="caption">
-            <h3>Thumbnail label</h3>
-            <p>...</p>
-            <p><a href="#" class="btn TREED" role="button">Button</a>
+            <h3>El Mejor Te del Momento</h3>
+            <p>Sin duda <br>Sus opciones son delciosas</p>
+            <p><a href="app/Tienda/" class="btn TREED" role="button">Visita la Tienda</a>
           </div>
         </div>
       </div>
@@ -185,9 +185,9 @@ session_start();
         <div class="thumbnail">
           <img src="img/chat.png" alt="...">
           <div class="caption">
-            <h3>Thumbnail label</h3>
-            <p>...</p>
-            <p><a href="#" class="btn TREED" role="button">Button</a>
+            <h3>Siempre regreso</h3>
+            <p>Siempre encuentro lo que necesito</p>
+            <p><a href="app/Tienda/" class="btn TREED" role="button">Visita la Tienda</a>
           </div>
         </div>
       </div>
