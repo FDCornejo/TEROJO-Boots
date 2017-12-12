@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 05-12-2017 a las 10:48:20
+-- Tiempo de generación: 12-12-2017 a las 09:28:47
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 7.1.7
 
@@ -58,7 +58,8 @@ CREATE TABLE `Direcciones` (
 --
 
 INSERT INTO `Direcciones` (`UsuarioID`, `Calle`, `Numero`, `Colonia`, `CP`, `Ciudad`, `Estado`, `Pais`) VALUES
-(20, 'Agua Zarca', '473', 'Manantiales', 58186, 'Morelia', 'Michoacan', 'MÃ©xico');
+(20, 'Agua Zarca', '473', 'Manantiales', 58186, 'Morelia', 'Michoacan', 'MÃ©xico'),
+(21, 'Agua Zarca', '473', 'Manantiales', 58186, 'Morelia', 'Michoacan', 'MÃ©xico');
 
 -- --------------------------------------------------------
 
@@ -79,10 +80,18 @@ CREATE TABLE `Inventario` (
 --
 
 INSERT INTO `Inventario` (`InventarioID`, `ProductoNom`, `Stock`, `Precio`, `Imagen`) VALUES
-(2, 'Te Verde', 89, 15.50, 'Inventario/te1.jpg'),
-(18, 'Te Rojo', 11, 10.50, 'Inventario/te2.jpg'),
-(19, 'Te de Manzanilla', 10, 9.00, 'Inventario/te3.jpg'),
-(20, 'Te Oolong', 41, 25.00, 'Inventario/te4.jpg');
+(2, 'Te Verde', 85, 15.50, 'Inventario/te1.jpg'),
+(18, 'Te Rojo', 8, 10.50, 'Inventario/te2.jpg'),
+(19, 'Te de Manzanilla', 97, 9.00, 'Inventario/te3.jpg'),
+(20, 'Te Oolong', 40, 25.00, 'Inventario/te4.jpg'),
+(21, 'Te de Limon', 50, 5.00, 'Inventario/te5.jpg'),
+(22, 'Te de Menta', 29, 4.50, 'Inventario/te6.jpg'),
+(23, 'Te de Romero', 40, 12.00, 'Inventario/te7.jpg'),
+(24, 'Te Negro', 70, 13.50, 'Inventario/te9.jpg'),
+(25, 'Te de Tila', 50, 12.50, 'Inventario/te10.jpg'),
+(26, 'Te de Valeriana', 40, 12.00, 'Inventario/te11.jpg'),
+(27, 'Te de Manzana', 35, 15.00, 'Inventario/te12.jpg'),
+(28, 'Te de Zarzamora', 32, 20.00, 'Inventario/te13.jpg');
 
 -- --------------------------------------------------------
 
@@ -96,6 +105,17 @@ CREATE TABLE `Pedidos` (
   `Cantidad` int(11) DEFAULT NULL,
   `Total` double(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `Pedidos`
+--
+
+INSERT INTO `Pedidos` (`VentaID`, `InventarioID`, `Cantidad`, `Total`) VALUES
+(25, 2, 5, 77.50),
+(25, 19, 3, 27.00),
+(26, 20, 1, 25.00),
+(26, 22, 1, 4.50),
+(26, 28, 2, 40.00);
 
 -- --------------------------------------------------------
 
@@ -116,7 +136,8 @@ CREATE TABLE `Usuario` (
 --
 
 INSERT INTO `Usuario` (`UsuarioID`, `Correo`, `Contra`, `Nombre`, `Apellidos`) VALUES
-(20, '2506deccf01f9ca9fa1ef2f4096f2178', '760f4ceffb8cf58ddc5e0e661385ebd9', 'Daniel', 'Cornejo');
+(20, '2506deccf01f9ca9fa1ef2f4096f2178', '760f4ceffb8cf58ddc5e0e661385ebd9', 'Daniel', 'Cornejo'),
+(21, '466247d81af7a8e7e9800e80b7b7be2d', 'e10adc3949ba59abbe56e057f20f883e', 'Fernando', 'Giovanni');
 
 -- --------------------------------------------------------
 
@@ -136,7 +157,8 @@ CREATE TABLE `Ventas` (
 --
 
 INSERT INTO `Ventas` (`VentaID`, `IDUsuario`, `FechaVenta`, `Total`) VALUES
-(19, 20, '2017-12-05', 77.50);
+(25, 20, '2017-12-11', 104.50),
+(26, 20, '2017-12-12', 69.50);
 
 --
 -- Índices para tablas volcadas
@@ -190,22 +212,22 @@ ALTER TABLE `Ventas`
 -- AUTO_INCREMENT de la tabla `Carrito`
 --
 ALTER TABLE `Carrito`
-  MODIFY `CarroID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `CarroID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `Inventario`
 --
 ALTER TABLE `Inventario`
-  MODIFY `InventarioID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `InventarioID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT de la tabla `Usuario`
 --
 ALTER TABLE `Usuario`
-  MODIFY `UsuarioID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `UsuarioID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT de la tabla `Ventas`
 --
 ALTER TABLE `Ventas`
-  MODIFY `VentaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `VentaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- Restricciones para tablas volcadas
 --
