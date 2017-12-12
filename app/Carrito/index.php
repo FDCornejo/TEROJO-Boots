@@ -49,10 +49,12 @@ header("Location:Error.php");
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="flaticon-user"><br> Usuario</span></a>
             <ul class="dropdown-menu">
              <?php
-             if (!isset($_SESSION['ID']))
+              if (!isset($_SESSION['ID']))
                echo "<li><a href='#' data-toggle='modal' data-target='#exampleModal'>Iniciar Sesion</a></li>";
-             else echo "<li><a href='../Sesion/Opciones/Cerrar.php'>Cerrar Sesion</a></li>";
-
+             else{
+               echo "<li><a href='../User/index.php'>Usuario</a></li>"; 
+               echo "<li><a href='../Sesion/Opciones/Cerrar.php'>Cerrar Sesion</a></li>";
+             }
              ?>
            </ul>
          </li>
