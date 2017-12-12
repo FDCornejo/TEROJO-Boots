@@ -3,7 +3,9 @@ session_start();
 if (!isset($_SESSION['ID'])) {
 header("Location:../Carrito/Error.php");
 }
-
+$Quien=	$_SESSION['ID'];
+include '../Conexion.php';
+include 'Metodos.php';
   ?>
 
 <!DOCTYPE html>
@@ -65,12 +67,85 @@ header("Location:../Carrito/Error.php");
    <!-- /.container-fluid -->
  </nav>
  <main>
-   <div class='text-center container'>
+   <div class='container'>
+     <div class=" text-center page-header">
+   <h1>Sus Compras <small><?php echo Nombre($Quien)  ?>  </small> </h1>
+ </div>
    <div class='row'>
-     <div class='col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1 col-sm-12'>
+     <div class='col-md-5 col-lg-5 col-lg-offset-1 col-md-offset-1 col-sm-12'>
+
+       <div class="panel panel-default">
+        <div class="panel-heading"><h2>Vuestra Direccion</h2></div>
+         <div class="panel-body">
+           <ul class="list-group">
+             <?php
+             if ($conn->connect_error) return 0;
+             else{
+               $sql="select Calle,Numero,Colonia,CP,Ciudad,Estado,Pais from Direcciones where UsuarioID= ".$Quien.";";
+               $result1 = $conn->query($sql);
+               //Si El numero de columnas de la consulta es 0, retornamos 0
+               if ($result1->num_rows > 0){
+                 while($row = $result1->fetch_assoc()) {
+                   echo "<li class='list-group-item'>Calle: ".$row["Calle"]."</li>";
+                   echo "<li class='list-group-item'>Numero: ".$row["Numero"]."</li>";
+                   echo "<li class='list-group-item'>Colonia: ".$row["Colonia"]."</li>";
+                   echo "<li class='list-group-item'>Codigo Postal: ".$row["CP"]."</li>";
+                   echo "<li class='list-group-item'>Ciudad: ".$row["Ciudad"]."</li>";
+                   echo "<li class='list-group-item'>Estado: ".$row["Estado"]."</li>";
+                   echo "<li class='list-group-item'>Pais: ".$row["Pais"]."</li>";
+                 }
+               }
+               else echo "No se Encontro Nada";
+             }
+               ?>
+
+           </ul>
+         </div>
+       </div>
+     </div>
+     <div class='col-md-5 col-lg-5  col-sm-12'>
+       <div class="panel panel-default">
+        <div class="panel-heading"><h2>Tus Compras</h2></div>
+         <div class="panel-body">
+
+             <?php
+             if ($conn->connect_error) return 0;
+             else{
+               $sql="select VentaID, FechaVenta, Total from Ventas where IDUsuario=".$Quien.";";
+               $result1 = $conn->query($sql);
+               //Si El numero de columnas de la consulta es 0, retornamos 0
+               if ($result1->num_rows > 0){
+                 echo "<div class='table-responsive'>
+                 <table class='table'>
+                 <tr>
+                    <th>Fecha</th>
+                    <th>Pagado</th>
+                    <th>Accion</th>
+                  </tr>
+                 ";
+                 while($row = $result1->fetch_assoc()) {
+                   echo "<form action='Venta.php' method='post'>";
+
+                   echo "<tr>";
+
+                   echo "<td> ".$row["FechaVenta"]."</td>";
+                   echo "<td> ".$row["Total"]."</td>";
+                   echo "<td> <input class='btn btn-default' type='submit' value='Ver'></td>";
+                   echo " <input class='invisible' type=number value='".$row['VentaID']."'name='Venta'>";
+                   echo "</tr>";
+                   echo "</form>";
+                 }
+                 echo "</table>
+                 </div>";
+               }
+               else echo "No has Hecho ninguna Compra";
+             }
+             $conn-> close();
+               ?>
 
 
-
+         </div>
+       </div>
      </div>
    </div>
  </div>

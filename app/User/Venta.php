@@ -3,8 +3,11 @@ session_start();
 if (!isset($_SESSION['ID'])) {
 header("Location:../Carrito/Error.php");
 }
+if(empty($_POST)){
+header("Location:../Carrito/Error.php");
+}
 $Quien=	$_SESSION['ID'];
-$Venta=	$_SESSION['IDVenta'];
+$Venta=	$_POST["Venta"];
 include '../Conexion.php';
 include 'Metodos.php';
   ?>
@@ -72,7 +75,7 @@ include 'Metodos.php';
    <div class='row'>
      <div class='col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1 col-sm-12'>
        <div class="page-header">
-     <h1>Su ultima Compra <small><?php echo Nombre($Quien)  ?>  </small> </h1>
+     <h1>Su Compra <small><?php echo Nombre($Quien)  ?>  </small> </h1>
    </div>
        <?php
   if ($conn->connect_error) return 0;
@@ -160,7 +163,7 @@ include 'Metodos.php';
   </div>
   <div class="col-md-4 col-sm-12">
     <h3> Total a Pagar</h3>
-    <?php echo "<h2>".VentaTotal($Quien,$Venta)."</h2>";?>
+    <?php echo "<h2>$ ".VentaTotal($Quien,$Venta)."</h2>";?>
   </div>
 </div>
 

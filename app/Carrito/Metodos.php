@@ -7,7 +7,7 @@ function Aumentarinv($Que,$Cuanto){
 		$sqlUP=" UPDATE `Inventario` SET `Stock`= Stock+(SELECT Cantidad-".$Cuanto." as 'Suma' from Carrito where Carrito.InventarioID=".$Que.") WHERE InventarioID=".$Que;
 		if ($conn->query($sqlUP) === TRUE){$conn->close(); return 1;}
 		else{$conn->close(); return 0; }
-		
+
 	}
 
 
@@ -44,7 +44,7 @@ function ChangeCarrito($Cuanto,$Total,$Carr){
 		$sqlUP="UPDATE Carrito SET Cantidad=".$Cuanto.", Total = ".$Total." WHERE  CarroID =".$Carr."";
 		if ($conn->query($sqlUP) === TRUE){$conn->close(); return 1;}
 		else{$conn->close(); return 0; }
-		
+
 	}
 }
 
@@ -55,7 +55,7 @@ function RegresarInv($Que){
 		$sqlUP=" UPDATE `Inventario` SET `Stock`= Stock+(SELECT Cantidad as 'Suma' from Carrito where Carrito.InventarioID=".$Que.") WHERE InventarioID=".$Que;
 		if ($conn->query($sqlUP) === TRUE){$conn->close(); return 1;}
 		else{$conn->close(); return 0; }
-		
+
 	}
 
 
@@ -70,7 +70,7 @@ function BorrarRegistro1($Cual){
 		$sqlDel="DELETE FROM Carrito WHERE CarroID = ".$Cual."";
 		if ($conn->query($sqlDel) === TRUE){$conn->close(); return 1;}
 		else{$conn->close(); return 0; }
-		
+
 	}
 
 
@@ -108,7 +108,7 @@ include '../Conexion.php';
 							  VALUES (NULL, '".$Quien."', NULL,  '".$Total."')";
 		if ($conn->query($sql) === TRUE){$conn->close(); return IDVenta($Quien);}
 		else{$conn->close(); return 0; }
-		
+
 	}
 }
 
@@ -142,7 +142,7 @@ include '../Conexion.php';
 		 $sql=" insert into Pedidos (VentaID,InventarioID,Cantidad,Total) select ".$Venta.", InventarioID,Cantidad,Total from Carrito where UsuarioID=".$Quien." ";
 		if ($conn->query($sql) === TRUE){$conn->close(); return 1;}
 		else{$conn->close(); return 0; }
-		
+
 	}
 }
 
@@ -153,7 +153,7 @@ include '../Conexion.php';
 		$sqlUP=" UPDATE `Ventas` SET `FechaVenta`= NOW() WHERE VentaID=".$Venta;
 		if ($conn->query($sqlUP) === TRUE){$conn->close(); return 1;}
 		else{$conn->close(); return 0; }
-		
+
 	}
 
 
@@ -165,11 +165,66 @@ include '../Conexion.php';
 		$sqlDel="DELETE FROM Carrito WHERE UsuarioID = ".$Quien."";
 		if ($conn->query($sqlDel) === TRUE){$conn->close(); return 1;}
 		else{$conn->close(); return 0; }
-		
+
 	}
 
 
 }
+function VentaTotal($Quien,$Cual){
+	include '../Conexion.php';
+	if ($conn->connect_error) return 0;
+	else{
+		$sql="Select Total from Ventas where VentaID=".$Cual." and IDUsuario=".$Quien.";";
+		$result1 = $conn->query($sql);
+		//Si El numero de columnas de la consulta es 0, retornamos 0
+		if ($result1->num_rows > 0){
+			while($row = $result1->fetch_assoc()) {
+				$Total=$row["Total"];
+			}
+		}
+		else $Total=0;
+	}
+	$conn-> close();
+	return $Total;
+}
 
+
+function VentaFecha($Quien,$Cual){
+	include '../Conexion.php';
+	if ($conn->connect_error) return 0;
+	else{
+		$sql="Select FechaVenta from Ventas where VentaID=".$Cual." and IDUsuario=".$Quien.";";
+		$result1 = $conn->query($sql);
+		//Si El numero de columnas de la consulta es 0, retornamos 0
+		if ($result1->num_rows > 0){
+			while($row = $result1->fetch_assoc()) {
+				$Fecha=$row["FechaVenta"];
+			}
+		}
+		else $Fecha=0;
+	}
+	$conn-> close();
+	return $Fecha;
+}
+
+
+
+function Nombre($Quien){
+	include '../Conexion.php';
+	if ($conn->connect_error) return 0;
+	else{
+		$sql="Select Nombre, Apellidos from Usuario where UsuarioID=".$Quien.";";
+		$result1 = $conn->query($sql);
+		//Si El numero de columnas de la consulta es 0, retornamos 0
+		if ($result1->num_rows > 0){
+			while($row = $result1->fetch_assoc()) {
+				$Nombre=$row["Nombre"]." ".$row["Apellidos"];
+			}
+		}
+		else $Nombre="0";
+	}
+	$conn-> close();
+	return $Nombre;
+}
 
   ?>
