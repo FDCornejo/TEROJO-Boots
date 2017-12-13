@@ -2,10 +2,16 @@
 	text-align: center;
 }
 
-.demo-card-image.mdl-card {
+#Uno {
   width: 100%;
   height: auto;
   background: url('../img/T3.jpg') center / cover;
+}
+
+#Dos {
+  width: 100%;
+  height: auto;
+  background: url('../img/te4.jpg') center / cover;
 }
 .demo-card-image > .mdl-card__actions {
   height: 52px;
@@ -20,5 +26,8 @@
 .mapa{
 	width: auto;
 	height: auto;
-background-color: purple;
+}
+.Logito{
+  width: 50%;
+  height: 160%;
 }

@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="mdl/material.min.css">
       <link rel="stylesheet" type="text/css" href="css/Nosotros.css">
       <link href="../../css/general.css" rel="stylesheet">
+      <link href="../../font/flaticon.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Lobster|Merriweather" rel="stylesheet">
     </head>
     <body>
@@ -18,25 +19,24 @@
           <div class="mdl-layout__header-row">
             <!-- Title -->
             <span class="mdl-layout-title">
-               <a class="navbar-brand" href="../../">
-                <img class="Logito" src="../../img/logo-peque.png" alt="">
-              </a>
-            </span>
-            <!-- Add spacer, to align navigation to the right -->
-            <div class="mdl-layout-spacer"></div>
-          </div>
-        </header>
-        <div class="mdl-layout__drawer">
-          <span class="mdl-layout-title">
-            <a class="navbar-brand" href="../../">
+             <a class="navbar-brand" href="../../">
+              <img class="Logito" src="../../img/logo-peque.png" alt="">
+            </a>
+          </span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          <a class="navbar-brand" href="../../">
             <img class="Logito" src="../../img/logo-peque.png" alt="">
           </a>
         </span>
-          <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="../..">Home</a>
-            <a class="mdl-navigation__link" href="../Nosotros/">Nosotros</a>
-            <a class="mdl-navigation__link" href="../Carrito/">Canasto</a>
-            <a class="mdl-navigation__link" href="../Tienda/">Tienda</a>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="../.."><span class="flaticon-home"></span>Home</a>
+          <a class="mdl-navigation__link" href="../Nosotros/"><span class="flaticon-tea-cup"></span>Nosotros</a>
+          <a class="mdl-navigation__link" href="../Tienda/"><span class="flaticon-teapot">Tienda</a>
 
           </nav>
         </div>
@@ -46,67 +46,53 @@
 
             <div class="mdl-grid">
 
-<div class="mdl-cell--1-offset-desktop  mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--3-col-tablet ">
-<div class="demo-card-image mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title mdl-card--expand"></div>
-  <div class="mdl-card__actions">
-    <span class="demo-card-image__filename">Image.jpg</span>
-  </div>
-</div>
-
-</div>
-
-          <div class=" mdl-cell--2-offset-tablet mdl-cell--12 -col-phone mdl-cell--4-col-desktop mdl-cell--1-offset-desktop mdl-cell--3-col-tablet"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ull12 mco lphonenisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-
-  </div>
-              <br>
-
-              <div class="mdl-grid">
-                  <div class="mdl-cell--1-offset-desktop  mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--3-col-tablet ">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ull12 mco lphonenisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </div>
-
-
-                  <div class=" mdl-cell--2-offset-tablet mdl-cell--12 -col-phone mdl-cell--4-col-desktop mdl-cell--1-offset-desktop mdl-cell--3-col-tablet">
-
-                  <div class="demo-card-image mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title mdl-card--expand"></div>
-  <div class="mdl-card__actions">
-    <span class="demo-card-image__filename">Image.jpg</span>
-  </div>
-</div>
-
-                  </div>
+              <div class="mdl-cell--1-offset-desktop  mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--3-col-tablet ">
+                <div class="demo-card-image mdl-card mdl-shadow--2dp">
+                  <div  id="Dos"  class="mdl-card__title mdl-card--expand"></div>
+                </div>
 
               </div>
 
-<div class="mdl-grid">
-<div class =" mdl-cell--2-offset-desktop mdl-cell--8-col-desktop">
-     <h3 class="text-center" >My Google Maps Demo</h3>
-   <div class="mapa">
-   </div>
-    </div>
-</div>
-<br>
+              <div class=" mdl-cell--2-offset-tablet mdl-cell--12 -col-phone mdl-cell--4-col-desktop mdl-cell--1-offset-desktop mdl-cell--3-col-tablet"> 
+                <h2>Nuestra Vision</h2>
+                Nuestra Vision consiste en llegar a niveles internacionales ofreciendo asi no solo los tipos de te mas conocidos si no los mas adecuados e interesantes para el mundo de los lugares mas inexplorados logrando un sabort exotico.
 
-            <footer class="mdl-mini-footer mdl-color--red-A700">
-              <div class="mdl-mini-footer__left-section ">
-                <div class="mdl-logo ELobster">Tea Rouge</div>
-                <ul class="mdl-mini-footer__link-list ">
-                  <li><a class="mdl-color-text--red-100 " href="#">Help</a></li>
-                  <li><a class="mdl-color-text--red-100 " href="#">Privacy & Terms</a></li>
-                </ul>
               </div>
+
+            </div>
+            <br>
+
+            <div class="mdl-grid">
+              <div class="mdl-cell--1-offset-desktop  mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--3-col-tablet ">
+               <h2>Nuestra Mision</h2>
+               <p>
+                 Nuestra mision es ofrecer te de primera calidad al mundo otorgando un medio masivo en linea que permita la compra y venta de nuestros productos.
+               </p>
+             </div>
+
+
+             <div class="mdl-cell--1-offset-desktop  mdl-cell--5-col-desktop mdl-cell--12-col-phone mdl-cell--3-col-tablet ">
+              <div  class="demo-card-image mdl-card  mdl-shadow--2dp">
+                <div id="Uno" class="mdl-card__title mdl-card--expand"></div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="mdl-grid">
+            <div class =" mdl-cell--2-offset-desktop mdl-cell--8-col-desktop">
+              <h3 class="text-center" >Nuestra Ubiicacion</h3>
+              <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.4732893283895!2d-101.2412773859089!3d19.69246418673722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842d0ea7baf50925%3A0xf6d08d4a41f9ed9f!2sCalle+Manantiales+de+Agua+Zarca+473%2C+Los+Manantiales%2C+58186+Morelia%2C+Mich.!5e0!3m2!1ses-419!2smx!4v1513168569588" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <footer class="mdl-mini-footer mdl-color--red-A700">
+            <div class="mdl-mini-footer__left-section ">
+              <div class="mdl-logo ELobster">Tea Rouge</div>
             </footer>
 
 
@@ -114,10 +100,6 @@
         </main>
 
       </div>
-        <script src="js/map.js"></script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxeDv3jHtLfd2OI9JA9Xsw1PKlwfww_ZQ&callback=initMap">
-    </script>
       <script defer src="mdl/material.min.js"></script>
     </body>
     </html>

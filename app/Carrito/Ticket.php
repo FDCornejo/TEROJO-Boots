@@ -71,6 +71,9 @@ include 'Metodos.php';
  </nav>
  <main>
    <div class='container'>
+      <ul class="pager">
+    <li class="previous"><a href="../Tienda/"><span aria-hidden="true">&larr;</span> Visitar Tienda </a></li>
+  </ul>
    <div class='row'>
      <div class='col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1 col-sm-12'>
        <div class="page-header">

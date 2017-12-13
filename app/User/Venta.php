@@ -74,6 +74,11 @@ include 'Metodos.php';
  </nav>
  <main>
    <div class='container'>
+    <nav aria-label="...">
+  <ul class="pager">
+    <li class="previous"><a href="../User/"><span aria-hidden="true">&larr;</span> Ventas </a></li>
+  </ul>
+</nav>
    <div class='row'>
      <div class='col-md-10 col-lg-10 col-lg-offset-1 col-md-offset-1 col-sm-12'>
        <div class="page-header">
